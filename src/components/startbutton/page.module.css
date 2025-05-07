@@ -5,13 +5,16 @@
 }
 
 .button {
+  position: absolute;
   padding: 10px 20px;
-  background-color: #1d4ed8;
+  background-color: #1dd88d;
   color: white;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  margin-top: 400px;
+  margin-left: 150px;
 }
 
 .button:hover {

@@ -4,3 +4,7 @@
   color: rgb(0, 0, 0);
   left: 32%;
 }
+
+body {
+  background-color: red;
+}
