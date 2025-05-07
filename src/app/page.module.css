@@ -1,3 +1,6 @@
 .title {
-  color: rgb(211, 17, 17);
+  position: fixed;
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+  left: 32%;
 }

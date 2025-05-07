@@ -1,0 +1,19 @@
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #1e40af;
+}
