@@ -7,16 +7,17 @@
 .button {
   position: absolute;
   padding: 10px 20px;
-  background-color: #1dd88d;
+  background-color: #000000;
   color: white;
   border: none;
-  border-radius: 9999px;
+  border-radius: 100px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  margin-top: 400px;
-  margin-left: 150px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .button:hover {
-  background-color: #1e40af;
+  background-color: #ffffff;
 }
