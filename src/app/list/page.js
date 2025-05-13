@@ -54,7 +54,10 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Stations</h1>
+      {/* Bar above the search input */}
+      <div className={styles.bar}></div>
+
+      {/* Search input */}
       <input
         type="text"
         value={filter}
@@ -62,11 +65,39 @@ export default function Home() {
         className={styles.searchInput}
         placeholder="zoek"
       />
+
       {stations.map((station) => (
         <div key={station.id} className={styles.stationCard}>
           <Link href={`/stations/${station.id}`}>
-            <span className={styles.stationName}>{station.name}</span>
-            <span className={styles.stationDistance}>{station.distance}km</span>
+            <div>
+              <span className={styles.stationName}>{station.name}</span>
+              <span className={styles.stationDistance}>
+                {station.distance}km
+              </span>
+            </div>
+
+            {/* Bar for bikes and slots */}
+            <div className={styles.barContainer}>
+              {/* Bike bar */}
+              <div
+                className={styles.bikeBar}
+                style={{
+                  width: `${100 - (station.bikesAvailable / station.totalBikes) * 100}%`,
+                }}
+              >
+                {station.bikesAvailable} bikes
+              </div>
+
+              {/* Slot bar */}
+              <div
+                className={styles.slotBar}
+                style={{
+                  width: `${100 - (station.slotsAvailable / station.totalSlots) * 100}%`,
+                }}
+              >
+                {station.slotsAvailable} slots
+              </div>
+            </div>
           </Link>
         </div>
       ))}
