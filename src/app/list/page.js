@@ -75,30 +75,30 @@ export default function Home() {
                 {station.distance}km
               </span>
             </div>
-
-            {/* Bar for bikes and slots */}
-            <div className={styles.barContainer}>
-              {/* Bike bar */}
-              <div
-                className={styles.bikeBar}
-                style={{
-                  width: `${100 - (station.bikesAvailable / station.totalBikes) * 100}%`,
-                }}
-              >
-                {station.bikesAvailable} bikes
-              </div>
-
-              {/* Slot bar */}
-              <div
-                className={styles.slotBar}
-                style={{
-                  width: `${100 - (station.slotsAvailable / station.totalSlots) * 100}%`,
-                }}
-              >
-                {station.slotsAvailable} slots
-              </div>
-            </div>
           </Link>
+
+          {/* Below the station name and distance, add the bike and slot bars */}
+          <div className={styles.barContainer}>
+            <div
+              className={styles.bikeBar}
+              style={{
+                width: `${(station.bikesAvailable / station.totalBikes) * 100}%`,
+              }}
+            >
+              {station.bikesAvailable} bikes
+            </div>
+          </div>
+
+          <div className={styles.barContainer}>
+            <div
+              className={styles.slotBar}
+              style={{
+                width: `${(station.slotsAvailable / station.totalSlots) * 100}%`,
+              }}
+            >
+              {station.slotsAvailable} slots
+            </div>
+          </div>
         </div>
       ))}
     </div>

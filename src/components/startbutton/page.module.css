@@ -7,8 +7,8 @@
 .button {
   position: absolute;
   padding: 10px 20px;
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: #1f5e7a;
   border: none;
   border-radius: 100px;
   cursor: pointer;
@@ -16,6 +16,8 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  left: 37%;
+  top: 42%;
 }
 
 .button:hover {

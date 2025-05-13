@@ -12,9 +12,12 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h1 className={styles.title}>PEDAL UP</h1>
-      <StartButton onClick={handleClick} />
+    <div className={styles.wrapper}>
+      <img src="/images/logo.svg" alt="Logo" className={styles.logo} />
+
+      <div className={styles.startButton}>
+        <StartButton onClick={handleClick} />
+      </div>
     </div>
   );
 }

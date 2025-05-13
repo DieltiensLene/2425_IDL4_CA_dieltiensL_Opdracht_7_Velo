@@ -1,12 +1,16 @@
-.title {
-  font-size: 40px;
-  color: #22577a;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 32%;
+body {
+  background-color: #1f5e7a;
+}
+.wrapper {
+  text-align: center;
+  padding: 40px 0;
 }
 
-body {
-  background-color: #ffffff;
+.logo {
+  width: 150px; /* Adjust to your needs */
+  margin-top: 50%;
+}
+
+.startButton {
+  display: inline-block;
 }
