@@ -55,7 +55,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Stations</h1>
-      <input type="text" value={filter} onChange={handleFilterChange} />
+      <input
+        type="text"
+        value={filter}
+        onChange={handleFilterChange}
+        className={styles.searchInput}
+        placeholder="zoek"
+      />
       {stations.map((station) => (
         <div key={station.id} className={styles.stationCard}>
           <Link href={`/stations/${station.id}`}>
