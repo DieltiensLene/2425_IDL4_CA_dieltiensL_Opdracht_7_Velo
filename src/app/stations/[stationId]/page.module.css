@@ -1,3 +1,40 @@
+.stationPage {
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
 .title {
-  color: #1f5e7a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.labelLine {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.dotsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  justify-content: center;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.filled {
+  background-color: #22577a; /* Adjust to match your color scheme */
+}
+
+.empty {
+  border: 2px solid #22577a;
+  background-color: transparent;
 }

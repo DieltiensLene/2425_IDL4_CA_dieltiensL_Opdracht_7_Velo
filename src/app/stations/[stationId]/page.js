@@ -15,32 +15,29 @@ export default function Station() {
     (station) => station.id === params.stationId
   );
 
+  if (!station) return <div>Station not found</div>;
+
   const totalCapacity = station.free_bikes + station.empty_slots;
-  const bikesPercentage = (station.free_bikes / totalCapacity) * 100;
-  const slotsPercentage = (station.empty_slots / totalCapacity) * 100;
 
   return (
     <div className={styles.stationPage}>
       <h1 className={styles.title}>{station.name}</h1>
 
-      <div className={styles.infoLine}>
+      <div className={styles.labelLine}>
         <span>Bikes available: {station.free_bikes}</span>
-        <div className={styles.barWrapper}>
-          <div
-            className={styles.bikeBar}
-            style={{ width: `${bikesPercentage}%` }}
-          ></div>
-        </div>
+        <span>Slots available: {station.empty_slots}</span>
       </div>
 
-      <div className={styles.infoLine}>
-        <span>Slots available: {station.empty_slots}</span>
-        <div className={styles.barWrapper}>
-          <div
-            className={styles.slotBar}
-            style={{ width: `${slotsPercentage}%` }}
-          ></div>
-        </div>
+      <div className={styles.dotsWrapper}>
+        {[...Array(totalCapacity)].map((_, i) => {
+          const isBike = i < station.free_bikes;
+          return (
+            <div
+              key={i}
+              className={`${styles.dot} ${isBike ? styles.filled : styles.empty}`}
+            ></div>
+          );
+        })}
       </div>
     </div>
   );

@@ -53,31 +53,34 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      {/* Bar above the search input */}
-      <div className={styles.bar}></div>
+    <div className={styles.wrapper}>
+      <img src="/images/logo.svg" alt="Logo" className={styles.logo} />
+      <div className={styles.container}>
+        {/* Bar above the search input */}
+        <div className={styles.bar}></div>
 
-      {/* Search input */}
-      <input
-        type="text"
-        value={filter}
-        onChange={handleFilterChange}
-        className={styles.searchInput}
-        placeholder="zoek"
-      />
+        {/* Search input */}
+        <input
+          type="text"
+          value={filter}
+          onChange={handleFilterChange}
+          className={styles.searchInput}
+          placeholder="zoek"
+        />
 
-      {stations.map((station) => (
-        <div key={station.id} className={styles.stationCard}>
-          <Link href={`/stations/${station.id}`}>
-            <div className={styles.station}>
-              <span className={styles.stationName}>{station.name}</span>
-              <span className={styles.stationDistance}>
-                {station.distance}km
-              </span>
-            </div>
-          </Link>
-        </div>
-      ))}
+        {stations.map((station) => (
+          <div key={station.id} className={styles.stationCard}>
+            <Link href={`/stations/${station.id}`}>
+              <div className={styles.station}>
+                <span className={styles.stationName}>{station.name}</span>
+                <span className={styles.stationDistance}>
+                  {station.distance}km
+                </span>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
