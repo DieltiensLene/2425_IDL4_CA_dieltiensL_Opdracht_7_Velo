@@ -11,7 +11,6 @@ export default function Home() {
   const [location, setLocation] = useState({});
   const { network, isLoading, isError } = useNetwork();
 
-  // use effect gebruiken om bv iets op te roepen enkel bij opstart van de app
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -37,7 +36,6 @@ export default function Home() {
     (station) => station.name.toLowerCase().indexOf(filter.toLowerCase()) >= 0
   );
 
-  // map stations to add disrance to current location
   stations.map((station) => {
     station.distance =
       getDistance(
@@ -48,7 +46,6 @@ export default function Home() {
       ).distance / 1000;
   });
 
-  // sort stations by distance
   stations.sort((a, b) => a.distance - b.distance);
 
   function handleFilterChange(e) {
@@ -60,7 +57,7 @@ export default function Home() {
       <h1 className={styles.title}>Stations</h1>
       <input type="text" value={filter} onChange={handleFilterChange} />
       {stations.map((station) => (
-        <div key={station.id}>
+        <div key={station.id} className={styles.stationCard}>
           <Link href={`/stations/${station.id}`}>
             {station.name}: {station.distance}km
           </Link>

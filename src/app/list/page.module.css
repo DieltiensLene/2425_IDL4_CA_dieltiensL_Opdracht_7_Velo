@@ -5,3 +5,22 @@
 body {
   background-color: white;
 }
+
+.stationCard {
+  border: 2px solid #ccc; /* light gray border */
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.stationCard:hover {
+  border-color: #22167a; /* accent color on hover */
+}
+
+.stationCard a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
