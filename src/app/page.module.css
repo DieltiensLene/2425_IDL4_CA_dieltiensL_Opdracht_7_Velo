@@ -1,13 +1,12 @@
-body {
-  background-color: #1f5e7a;
-}
 .wrapper {
   text-align: center;
   padding: 40px 0;
+  background-color: #1f5e7a;
+  height: 100vh;
 }
 
 .logo {
-  width: 150px; /* Adjust to your needs */
+  width: 170px; /* Adjust to your needs */
   margin-top: 50%;
 }
 

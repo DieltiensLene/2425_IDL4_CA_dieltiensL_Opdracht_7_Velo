@@ -69,36 +69,13 @@ export default function Home() {
       {stations.map((station) => (
         <div key={station.id} className={styles.stationCard}>
           <Link href={`/stations/${station.id}`}>
-            <div>
+            <div className={styles.station}>
               <span className={styles.stationName}>{station.name}</span>
               <span className={styles.stationDistance}>
                 {station.distance}km
               </span>
             </div>
           </Link>
-
-          {/* Below the station name and distance, add the bike and slot bars */}
-          <div className={styles.barContainer}>
-            <div
-              className={styles.bikeBar}
-              style={{
-                width: `${(station.bikesAvailable / station.totalBikes) * 100}%`,
-              }}
-            >
-              {station.bikesAvailable} bikes
-            </div>
-          </div>
-
-          <div className={styles.barContainer}>
-            <div
-              className={styles.slotBar}
-              style={{
-                width: `${(station.slotsAvailable / station.totalSlots) * 100}%`,
-              }}
-            >
-              {station.slotsAvailable} slots
-            </div>
-          </div>
         </div>
       ))}
     </div>
