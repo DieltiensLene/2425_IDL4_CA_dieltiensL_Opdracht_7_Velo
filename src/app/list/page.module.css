@@ -1,13 +1,5 @@
-.title {
-  color: rgb(0, 0, 0);
-}
-
-body {
-  background-color: white;
-}
-
 .stationCard {
-  border: 2px solid #ccc; /* light gray border */
+  border: 2px solid #ccc;
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
@@ -16,11 +8,37 @@ body {
 }
 
 .stationCard:hover {
-  border-color: #22167a; /* accent color on hover */
+  border-color: #22167a;
 }
 
 .stationCard a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stationName {
+  margin-right: 10px;
+}
+
+.stationDistance {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #22167a;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.stationCard {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 16px; /* ⬅️ This adds space on left and right */
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
 }

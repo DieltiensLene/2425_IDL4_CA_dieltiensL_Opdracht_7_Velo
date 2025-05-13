@@ -53,13 +53,14 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1 className={styles.title}>Stations</h1>
       <input type="text" value={filter} onChange={handleFilterChange} />
       {stations.map((station) => (
         <div key={station.id} className={styles.stationCard}>
           <Link href={`/stations/${station.id}`}>
-            {station.name}: {station.distance}km
+            <span className={styles.stationName}>{station.name}</span>
+            <span className={styles.stationDistance}>{station.distance}km</span>
           </Link>
         </div>
       ))}
