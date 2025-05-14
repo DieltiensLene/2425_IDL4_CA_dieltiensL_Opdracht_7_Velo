@@ -24,8 +24,11 @@ export default function Station() {
       <h1 className={styles.title}>{station.name}</h1>
 
       <div className={styles.labelLine}>
-        <span>Bikes available: {station.free_bikes}</span>
-        <span>Slots available: {station.empty_slots}</span>
+        <span>Beschikbare fietsen: {station.free_bikes}</span>
+      </div>
+
+      <div className={styles.labelSlots}>
+        <span>Beschikbare sloten: {station.empty_slots}</span>
       </div>
 
       <div className={styles.dotsWrapper}>

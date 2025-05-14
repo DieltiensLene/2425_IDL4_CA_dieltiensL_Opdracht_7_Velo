@@ -7,6 +7,7 @@
 .title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #22577a;
 }
 
 .labelLine {
@@ -22,6 +23,7 @@
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   justify-content: center;
+  margin-top: 22%;
 }
 
 .dot {
@@ -37,4 +39,27 @@
 .empty {
   border: 2px solid #22577a;
   background-color: transparent;
+}
+
+.labelLine {
+  position: absolute;
+  width: 170px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  left: 48%;
+  font-size: 14px;
+  padding: 6px;
+  margin: 16px;
+}
+
+.labelSlots {
+  position: absolute;
+  width: 170px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 6px;
+  margin: 16px;
 }

@@ -5,7 +5,7 @@ import styles from './page.module.css';
 const StartButton = ({ onClick }) => {
   return (
     <button onClick={onClick} className={styles.button}>
-      Get started
+      Start
     </button>
   );
 };

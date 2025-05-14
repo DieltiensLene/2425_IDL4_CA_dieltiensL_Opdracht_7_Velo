@@ -14,9 +14,9 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
-  left: 37%;
+  left: 42%;
   top: 42%;
 }
 

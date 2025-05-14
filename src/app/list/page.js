@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import useNetwork from '@/data/network';
 import { getDistance } from '@/helpers/get-distance';
 import Link from 'next/link';
+import StationItem from '@/components/stationItem/StationItem';
 
 export default function Home() {
   const [filter, setFilter] = useState('');
@@ -69,16 +70,7 @@ export default function Home() {
         />
 
         {stations.map((station) => (
-          <div key={station.id} className={styles.stationCard}>
-            <Link href={`/stations/${station.id}`}>
-              <div className={styles.station}>
-                <span className={styles.stationName}>{station.name}</span>
-                <span className={styles.stationDistance}>
-                  {station.distance}km
-                </span>
-              </div>
-            </Link>
-          </div>
+          <StationItem key={station.id} station={station} />
         ))}
       </div>
     </div>
