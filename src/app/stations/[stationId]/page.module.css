@@ -67,9 +67,9 @@
 .icon {
   position: absolute;
   left: 20px;
-  top: 46px;
-  width: 20px;
-  height: 20px;
+  top: 25px;
+  width: 25px;
+  height: 25px;
   transform: rotate(180deg);
 }
 
