@@ -2,11 +2,12 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center; /* Optional for better alignment on small screens */
 }
 
 .button {
   position: absolute;
-  padding: 8px 20px;
+  padding: 10px 30px;
   background-color: #ffffff;
   color: #1f5e7a;
   border: none;
@@ -14,12 +15,29 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
-  left: 42%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
   top: 55%;
 }
 
+/* Hover effect */
 .button:hover {
-  background-color: #ffffff;
+  background-color: #1f5e7a;
+  border: 2px solid #ccc;
+  color: #ffffff;
+}
+
+/* ✅ Media query for smaller screens */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .button {
+    padding: 6px 30px;
+    font-size: 1rem;
+    top: 52%;
+  }
 }

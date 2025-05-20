@@ -17,9 +17,21 @@
 .logo {
   position: absolute;
   width: 50px; /* Adjust to your needs */
-  margin-top: 2%;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   left: 45%;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .bar {
+    height: 60px;
+  }
+
+  .logo {
+    width: 45px;
+    top: 6px;
+  }
 }
