@@ -19,5 +19,8 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
     "prettier": "3.5.3"
+  },
+  "volta": {
+    "node": "22.15.1"
   }
 }

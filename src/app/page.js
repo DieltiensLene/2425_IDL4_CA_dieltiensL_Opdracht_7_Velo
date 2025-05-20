@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
-import StartButton from '../components/startbutton/Startbutton';
+import Button from '@/components/button/Button';
 
 export default function Home() {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function Home() {
       <img src="/images/logo.svg" alt="Logo" className={styles.logo} />
 
       <div className={styles.startButton}>
-        <StartButton onClick={handleClick} />
+        <Button onClick={handleClick} />
       </div>
     </div>
   );
