@@ -24,7 +24,7 @@ export default function Station() {
     <div className={styles.stationPage}>
       <h1 className={styles.title}>{station.name}</h1>
       <img
-        src="/pijl.svg"
+        src="/images/pijl.svg"
         alt="terug"
         className={styles.icon}
         onClick={() => router.push('/list')}

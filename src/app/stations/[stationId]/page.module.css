@@ -7,7 +7,7 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 30px;
   margin-bottom: 1rem;
   color: #22577a;
 }
@@ -64,13 +64,15 @@
 .icon {
   position: absolute;
   left: 20px;
-  top: 50px;
+  top: 45px;
+  width: 30px;
+  height: 30px;
 }
 
 /* ✅ Responsive tweaks but KEEP labelWrapper horizontal */
 @media (max-width: 600px) {
   .title {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .labelWrapper {
@@ -80,8 +82,8 @@
 
   .labelLine,
   .labelSlots {
-    font-size: 12px;
-    padding: 4px;
+    font-size: 14px;
+    padding: 6px;
   }
 
   .dot {
