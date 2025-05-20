@@ -4,7 +4,6 @@ import styles from './page.module.css';
 import { useState, useEffect } from 'react';
 import useNetwork from '@/data/network';
 import { getDistance } from '@/helpers/get-distance';
-import Link from 'next/link';
 import StationItem from '@/components/stationItem/StationItem';
 
 export default function Home() {
