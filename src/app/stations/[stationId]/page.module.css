@@ -47,8 +47,8 @@
 }
 
 .dot {
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
@@ -59,6 +59,12 @@
 .empty {
   border: 2px solid #22577a;
   background-color: transparent;
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  top: 50px;
 }
 
 /* ✅ Responsive tweaks but KEEP labelWrapper horizontal */
@@ -79,8 +85,8 @@
   }
 
   .dot {
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
   }
 
   .dotsWrapper {
