@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import useNetwork from '@/data/network';
 import { getDistance } from '@/helpers/get-distance';
 import StationItem from '@/components/stationItem/StationItem';
+import Link from 'next/link'; // ✅ Import Link
 
 export default function Home() {
   const [filter, setFilter] = useState('');
@@ -54,12 +55,19 @@ export default function Home() {
 
   return (
     <div className={styles.wrapper}>
-      <img src="/images/logo.svg" alt="Logo" className={styles.logo} />
+      {/* ✅ Make logo a link to '/' */}
+      <Link href="/">
+        <img
+          src="/images/logo.svg"
+          alt="Logo"
+          className={styles.logo}
+          style={{ cursor: 'pointer' }}
+        />
+      </Link>
+
       <div className={styles.container}>
-        {/* Bar above the search input */}
         <div className={styles.bar}></div>
 
-        {/* Search input */}
         <input
           type="text"
           value={filter}
