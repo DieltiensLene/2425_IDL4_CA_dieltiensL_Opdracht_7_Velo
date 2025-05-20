@@ -2,6 +2,8 @@
   padding: 20px;
   font-family: sans-serif;
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .title {
@@ -10,20 +12,33 @@
   color: #22577a;
 }
 
-.labelLine {
+/* Wrapper to place labels side-by-side */
+.labelWrapper {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 1rem;
+  justify-content: space-between;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
+/* Both labels look the same */
+.labelLine,
+.labelSlots {
+  flex: 1;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 6px;
+  background: white;
+  text-align: center;
+}
+
+/* Dots display */
 .dotsWrapper {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   justify-content: center;
-  margin-top: 22%;
 }
 
 .dot {
@@ -33,7 +48,7 @@
 }
 
 .filled {
-  background-color: #22577a; /* Adjust to match your color scheme */
+  background-color: #22577a;
 }
 
 .empty {
@@ -41,25 +56,24 @@
   background-color: transparent;
 }
 
-.labelLine {
-  position: absolute;
-  width: 170px;
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  box-sizing: border-box;
-  left: 48%;
-  font-size: 14px;
-  padding: 6px;
-  margin: 16px;
-}
+/* ✅ Responsive stacking for mobile */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.3rem;
+  }
 
-.labelSlots {
-  position: absolute;
-  width: 170px;
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  box-sizing: border-box;
-  font-size: 14px;
-  padding: 6px;
-  margin: 16px;
+  .labelWrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dotsWrapper {
+    gap: 8px;
+    margin-top: 30%;
+  }
 }

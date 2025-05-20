@@ -2,11 +2,12 @@
 
 import styles from './page.module.css';
 import useNetwork from '@/data/network';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 
 export default function Station() {
   const { network, isLoading, isError } = useNetwork();
   const params = useParams();
+  const router = useRouter(); // <-- useRouter hook here
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error</div>;
@@ -22,13 +23,20 @@ export default function Station() {
   return (
     <div className={styles.stationPage}>
       <h1 className={styles.title}>{station.name}</h1>
-
-      <div className={styles.labelLine}>
-        <span>Beschikbare fietsen: {station.free_bikes}</span>
-      </div>
-
-      <div className={styles.labelSlots}>
-        <span>Beschikbare sloten: {station.empty_slots}</span>
+      <img
+        src="../pijl.svg"
+        alt="terug"
+        className={styles.icon}
+        onClick={() => router.push('/list')} // <-- use router.push
+        style={{ cursor: 'pointer' }} // <-- fixed typo here
+      />
+      <div className={styles.labelWrapper}>
+        <div className={styles.labelLine}>
+          Beschikbare fietsen: {station.free_bikes}
+        </div>
+        <div className={styles.labelSlots}>
+          Beschikbare sloten: {station.empty_slots}
+        </div>
       </div>
 
       <div className={styles.dotsWrapper}>
