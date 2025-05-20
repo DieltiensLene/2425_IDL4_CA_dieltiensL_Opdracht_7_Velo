@@ -12,6 +12,11 @@
   color: #22577a;
 }
 
+.number {
+  font-weight: 700;
+  color: #22577a;
+}
+
 .labelWrapper {
   display: flex;
   justify-content: space-between;

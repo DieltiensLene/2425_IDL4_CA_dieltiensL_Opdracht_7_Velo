@@ -33,10 +33,12 @@ export default function Station() {
 
       <div className={styles.labelWrapper}>
         <div className={styles.labelLine}>
-          Beschikbare fietsen: {station.free_bikes}
+          Beschikbare fietsen:{' '}
+          <span className={styles.number}>{station.free_bikes}</span>
         </div>
         <div className={styles.labelSlots}>
-          Beschikbare sloten: {station.empty_slots}
+          Beschikbare sloten:{' '}
+          <span className={styles.number}>{station.empty_slots}</span>
         </div>
       </div>
 
