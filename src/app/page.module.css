@@ -3,13 +3,21 @@
   padding: 40px 0;
   background-color: #1f5e7a;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 170px; /* Adjust to your needs */
-  margin-top: 50%;
+  width: 40vw;
+  max-width: 200px;
+  height: auto;
+  margin-top: 20px;
+  margin-right: 15px;
 }
 
 .startButton {
   display: inline-block;
+  margin-top: 150px;
 }

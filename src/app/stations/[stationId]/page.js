@@ -7,7 +7,7 @@ import { useParams, useRouter } from 'next/navigation';
 export default function Station() {
   const { network, isLoading, isError } = useNetwork();
   const params = useParams();
-  const router = useRouter(); // <-- useRouter hook here
+  const router = useRouter();
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error</div>;
@@ -24,12 +24,13 @@ export default function Station() {
     <div className={styles.stationPage}>
       <h1 className={styles.title}>{station.name}</h1>
       <img
-        src="../pijl.svg"
+        src="/pijl.svg"
         alt="terug"
         className={styles.icon}
-        onClick={() => router.push('/list')} // <-- use router.push
-        style={{ cursor: 'pointer' }} // <-- fixed typo here
+        onClick={() => router.push('/list')}
+        style={{ cursor: 'pointer' }}
       />
+
       <div className={styles.labelWrapper}>
         <div className={styles.labelLine}>
           Beschikbare fietsen: {station.free_bikes}
