@@ -13,10 +13,12 @@ export default function Home() {
 
   return (
     <div className={styles.wrapper}>
-      <img src="/images/logo.svg" alt="Logo" className={styles.logo} />
+      <div className={styles.content}>
+        <img src="/images/logo.svg" alt="Logo" className={styles.logo} />
 
-      <div className={styles.startButton}>
-        <Button onClick={handleClick} />
+        <div className={styles.startButton}>
+          <Button onClick={handleClick} />
+        </div>
       </div>
     </div>
   );
