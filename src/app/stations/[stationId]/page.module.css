@@ -10,6 +10,7 @@
   font-size: 30px;
   margin-bottom: 1rem;
   color: #22577a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .number {
@@ -40,6 +41,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .dotsWrapper {
